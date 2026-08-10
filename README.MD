@@ -56,6 +56,6 @@ The work covers the full ML pipeline — from data preprocessing and augmentatio
 ## Key Takeaways
 
 - Transfer learning with modern CNN architectures is highly effective even on domain-specific binary tasks
-- Ensemble methods (snapshot ensembling + TTA) provide meaningful gains with no additional labelling cost
+- Post Processing methods (snapshot  + TTA) provide meaningful gains with no additional labelling cost
 - Threshold optimisation is an underrated post-processing step that significantly improved F1 on the imbalanced dataset
 - CutMix augmentation helped prevent overfitting on visually similar classes
