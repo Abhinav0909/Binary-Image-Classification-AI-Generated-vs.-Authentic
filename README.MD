@@ -8,7 +8,7 @@
 
 As AI-generated imagery becomes increasingly indistinguishable from real photographs, platforms like Etsy face a growing challenge: fraudulent product listings using fake images. This project builds a deep learning pipeline to automatically distinguish **AI-generated product images** from **authentic photographs**, using a real-world e-commerce dataset provided by Etsy.
 
-The work covers the full ML pipeline — from data preprocessing and augmentation through model fine-tuning, ensembling, and threshold optimisation — with a focus on maximising F1-score on an imbalanced binary classification task.
+The work covers the full ML pipeline — from data preprocessing and augmentation through model fine-tuning, snapshots, and threshold optimisation — with a focus on maximising F1-score on an imbalanced binary classification task.
 
 ---
 
@@ -41,8 +41,8 @@ The work covers the full ML pipeline — from data preprocessing and augmentatio
   - **ConvNeXt-Base** — modern CNN architecture competitive with Vision Transformers
 - Final classification head replaced and trained on the binary task
 
-### 4. Ensemble & Post-Processing
-- **Snapshot Ensembling** — saves model checkpoints at multiple learning rate cycle points and averages predictions, improving robustness without additional training cost
+### 4. Post-Processing
+- **Snapshot** — saves model checkpoints at multiple learning rate cycle points, improving robustness without additional training cost
 - **Test-Time Augmentation (TTA)** — applies augmentations at inference and averages predictions to reduce variance
 - **Threshold Optimisation** — tuned the decision boundary away from the default 0.5 to maximise F1-score on the validation set, particularly important given class imbalance
 
